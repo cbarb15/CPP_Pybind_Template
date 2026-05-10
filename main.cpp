@@ -10,7 +10,6 @@ int main() {
 
     py::scoped_interpreter guard{};
 
-    py::print("Hello, World!"); // use the Python API
     py::module_ calc = py::module_::import("calculate");
     py::object result = calc.attr("add")(1, 2);
     int n = result.cast<int>();
